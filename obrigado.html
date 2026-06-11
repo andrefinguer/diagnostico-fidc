@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitação confirmada — SOMMA Capital</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --somma-slate:#486878;
+    --somma-slate-800:#2c424d;
+    --somma-slate-900:#1f3039;
+    --champagne:#c2a878;
+    --paper:#fbfbf9;
+    --surface:#ffffff;
+    --fg-1:#1c2931;
+    --fg-2:#4a5a63;
+    --fg-3:#73828a;
+    --on-slate:#f4f6f5;
+    --on-slate-2:rgba(244,246,245,.72);
+    --rule:#e6e4dd;
+    --rule-on-slate:rgba(244,246,245,.16);
+    --r-diag-xs:0 6px 0 6px;
+    --r-diag-sm:0 10px 0 10px;
+    --r-diag-md:0 16px 0 16px;
+    --shadow-2:0 4px 16px rgba(28,41,49,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--paper);color:var(--fg-1);
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    min-height:100vh;display:flex;flex-direction:column;
+  }
+  ::selection{background:var(--somma-slate);color:#fff}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;width:100%}
+
+  header{border-bottom:1px solid var(--rule);background:var(--paper)}
+  .header-inner{display:flex;align-items:center;height:72px}
+  .wordmark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+  .wm-main{font-size:19px;font-weight:600;letter-spacing:.12em;color:var(--somma-slate-800)}
+  .wm-sub{font-size:9.5px;font-weight:500;letter-spacing:.34em;color:var(--fg-3);text-transform:uppercase;margin-top:4px}
+
+  main{flex:1;padding:72px 0 96px}
+  .confirm-mark{
+    width:56px;height:56px;border-radius:50%;
+    background:var(--somma-slate-800);color:#fff;
+    display:flex;align-items:center;justify-content:center;margin-bottom:28px;
+  }
+  .confirm-mark svg{width:26px;height:26px;stroke-width:1.5}
+  .eyebrow{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);display:block;margin-bottom:16px}
+  h1{font-size:clamp(30px,4.5vw,42px);font-weight:300;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px}
+  .lede{color:var(--fg-2);line-height:1.75;max-width:600px}
+
+  .upload-card{
+    margin-top:48px;background:var(--surface);
+    border:1px solid var(--rule);border-radius:var(--r-diag-md);
+    padding:40px 36px;box-shadow:var(--shadow-2);
+  }
+  @media(max-width:560px){.upload-card{padding:28px 22px}}
+  .upload-card h2{font-size:21px;font-weight:500;margin-bottom:12px}
+  .upload-card p{font-size:15px;color:var(--fg-2);line-height:1.7}
+  .send-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:inherit;font-size:15px;font-weight:500;
+    padding:14px 26px;border:none;cursor:pointer;text-decoration:none;
+    border-radius:var(--r-diag-xs);
+    transition:background-color .16s linear,transform .12s linear;
+  }
+  .btn svg{width:18px;height:18px;stroke-width:1.5}
+  .btn-primary{background:var(--somma-slate);color:#fff}
+  .btn-primary:hover{background:var(--somma-slate-800)}
+  .btn-primary:active{background:var(--somma-slate-900);transform:translateY(1px)}
+  .btn-outline{background:transparent;color:var(--somma-slate-800);border:1px solid var(--somma-slate)}
+  .btn-outline:hover{background:rgba(72,104,120,.06)}
+  .btn:focus-visible,a:focus-visible{outline:2px solid var(--somma-slate);outline-offset:2px}
+  .docs-hint{
+    margin-top:24px;padding-top:20px;border-top:1px solid var(--rule);
+    font-size:13.5px;color:var(--fg-3);line-height:1.7;
+  }
+
+  .next{margin-top:56px}
+  .next h2{font-size:21px;font-weight:500;margin-bottom:24px}
+  .next ol{list-style:none;counter-reset:n}
+  .next li{
+    counter-increment:n;display:flex;gap:18px;align-items:flex-start;
+    padding:18px 0;border-bottom:1px solid var(--rule);
+    font-size:15px;color:var(--fg-2);line-height:1.65;
+  }
+  .next li::before{
+    content:"0" counter(n);
+    font-size:13px;font-weight:500;letter-spacing:.14em;
+    color:var(--champagne);flex-shrink:0;margin-top:2px;
+  }
+  .next li strong{font-weight:500;color:var(--fg-1)}
+
+  .contact{
+    margin-top:48px;font-size:14.5px;color:var(--fg-2);line-height:1.9;
+  }
+  .contact a{color:var(--somma-slate);text-decoration:none}
+  .contact a:hover{text-decoration:underline;text-underline-offset:3px}
+
+  footer{background:var(--somma-slate-900);color:rgba(244,246,245,.5);padding:32px 0;font-size:12px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="index.html" class="wordmark" aria-label="SOMMA Capital">
+      <span class="wm-main">SOMMA</span>
+      <span class="wm-sub">Capital · Estruturados</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="confirm-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <span class="eyebrow">Solicitação confirmada</span>
+    <h1>Seu diagnóstico FIDC está em andamento.</h1>
+    <p class="lede">Recebemos a confirmação da sua solicitação. Falta apenas um passo para o
+    nosso time iniciar a análise: o envio do balanço da sua empresa.</p>
+
+    <div class="upload-card">
+      <h2>Envie o balanço do último exercício</h2>
+      <p>Escolha o canal mais prático para você. O documento será recebido diretamente por
+      André Finguer, da SOMMA Capital, que confirmará o recebimento e o início da análise.</p>
+      <div class="send-actions">
+        <a class="btn btn-primary"
+           href="https://wa.me/5547988544714?text=Ol%C3%A1%2C%20Andr%C3%A9.%20Acabei%20de%20confirmar%20o%20Diagn%C3%B3stico%20FIDC%20e%20estou%20enviando%20o%20balan%C3%A7o%20da%20minha%20empresa%20por%20aqui."
+           target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Enviar pelo WhatsApp
+        </a>
+        <a class="btn btn-outline"
+           href="mailto:andre.finguer@gruposomma.com.br?subject=Diagn%C3%B3stico%20FIDC%20%E2%80%94%20Balan%C3%A7o%20da%20empresa&body=Ol%C3%A1%2C%20Andr%C3%A9.%0A%0AAcabei%20de%20confirmar%20o%20Diagn%C3%B3stico%20FIDC.%20Segue%20em%20anexo%20o%20balan%C3%A7o%20do%20%C3%BAltimo%20exerc%C3%ADcio.%0A%0AEmpresa%3A%20%0ACNPJ%3A%20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg> Enviar por e-mail
+        </a>
+      </div>
+      <p class="docs-hint">Formato: PDF preferencialmente. Se tiver em mãos DRE ou aging de
+      recebíveis, anexe também — enriquecem a análise, mas não são obrigatórios.</p>
+    </div>
+
+    <div class="next">
+      <h2>O que acontece a partir daqui</h2>
+      <ol>
+        <li><span><strong>Confirmação de recebimento.</strong> Assim que o balanço chegar, você recebe a confirmação e o prazo passa a contar.</span></li>
+        <li><span><strong>Análise pelo time de estruturados.</strong> Avaliamos perfil de recebíveis, potencial de funding, eficiência tributária e possibilidade de enquadramento como entidade de investimento.</span></li>
+        <li><span><strong>Entrega do estudo em até 5 dias úteis.</strong> Você recebe o diagnóstico e agendamos uma conversa de devolutiva para percorrer os resultados.</span></li>
+      </ol>
+    </div>
+
+    <div class="contact">
+      Qualquer dúvida nesse meio-tempo:<br>
+      <strong style="font-weight:500;color:var(--fg-1)">André Finguer</strong> — SOMMA Capital<br>
+      <a href="mailto:andre.finguer@gruposomma.com.br">andre.finguer@gruposomma.com.br</a> ·
+      <a href="https://wa.me/5547988544714" target="_blank" rel="noopener">WhatsApp (47) 98854-4714</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>SOMMA Investimentos S.A. — CNPJ 05.563.299/0001-06</span>
+    <span>© 2026 SOMMA. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+</body>
+</html>
