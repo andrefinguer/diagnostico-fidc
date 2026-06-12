@@ -55,6 +55,11 @@
   h1{font-size:clamp(30px,4.5vw,42px);font-weight:300;line-height:1.15;letter-spacing:-.01em;margin-bottom:20px}
   .lede{color:var(--fg-2);line-height:1.75;max-width:600px}
 
+  .upload-card + .upload-card{margin-top:24px}
+  .step-tag{
+    display:block;font-size:12px;font-weight:500;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--champagne);margin-bottom:14px;
+  }
   .upload-card{
     margin-top:48px;background:var(--surface);
     border:1px solid var(--rule);border-radius:var(--r-diag-md);
@@ -123,14 +128,31 @@
   <div class="wrap">
     <div class="confirm-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
     <span class="eyebrow">Solicitação confirmada</span>
-    <h1>Seu diagnóstico FIDC está em andamento.</h1>
-    <p class="lede">Recebemos a confirmação da sua solicitação. Falta apenas um passo para o
-    nosso time iniciar a análise: o envio do balanço da sua empresa.</p>
+    <h1>Seu diagnóstico FIDC começa agora.</h1>
+    <p class="lede">Recebemos os seus dados. Agora são dois passos rápidos: agendar a primeira
+    conversa com o nosso time e enviar o balanço da sua empresa.</p>
 
     <div class="upload-card">
+      <span class="step-tag">Passo 1 de 2</span>
+      <h2>Agende a primeira conversa</h2>
+      <p>Escolha o melhor horário na agenda abaixo. É uma conversa objetiva, de até 30 minutos,
+      com André Finguer, da SOMMA Capital — para entender a sua operação e alinhar o que o
+      diagnóstico vai responder.</p>
+      <div class="send-actions">
+        <a class="btn btn-primary"
+           href="https://calendar.app.google/h4QP9qD79GuzbmKr8"
+           target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Escolher horário na agenda
+        </a>
+      </div>
+    </div>
+
+    <div class="upload-card">
+      <span class="step-tag">Passo 2 de 2</span>
       <h2>Envie o balanço do último exercício</h2>
-      <p>Escolha o canal mais prático para você. O documento será recebido diretamente por
-      André Finguer, da SOMMA Capital, que confirmará o recebimento e o início da análise.</p>
+      <p>De preferência antes da conversa agendada — assim o nosso time já chega com a primeira
+      leitura feita. Escolha o canal mais prático; o documento é recebido diretamente por André
+      Finguer, que confirma o recebimento.</p>
       <div class="send-actions">
         <a class="btn btn-primary"
            href="https://wa.me/5547988544714?text=Ol%C3%A1%2C%20Andr%C3%A9.%20Acabei%20de%20confirmar%20o%20Diagn%C3%B3stico%20FIDC%20e%20estou%20enviando%20o%20balan%C3%A7o%20da%20minha%20empresa%20por%20aqui."
@@ -149,9 +171,9 @@
     <div class="next">
       <h2>O que acontece a partir daqui</h2>
       <ol>
-        <li><span><strong>Confirmação de recebimento.</strong> Assim que o balanço chegar, você recebe a confirmação e o prazo passa a contar.</span></li>
-        <li><span><strong>Análise pelo time de estruturados.</strong> Avaliamos perfil de recebíveis, potencial de funding, eficiência tributária e possibilidade de enquadramento como entidade de investimento.</span></li>
-        <li><span><strong>Entrega do estudo em até 5 dias úteis.</strong> Você recebe o diagnóstico e agendamos uma conversa de devolutiva para percorrer os resultados.</span></li>
+        <li><span><strong>Conversa inicial.</strong> No horário agendado, entendemos a sua operação e alinhamos o que o diagnóstico vai responder.</span></li>
+        <li><span><strong>Análise pelo time de estruturados.</strong> Com o balanço em mãos, avaliamos perfil de recebíveis, potencial de funding, eficiência tributária e possibilidade de enquadramento como entidade de investimento.</span></li>
+        <li><span><strong>Entrega do estudo em até 5 dias úteis.</strong> Você recebe o diagnóstico e fazemos a devolutiva, percorrendo os resultados juntos.</span></li>
       </ol>
     </div>
 
